@@ -28,7 +28,7 @@ class Card extends React.Component {
 
 	render() {
 		const { monsters, searchField } = this.state;
-		const filteredMonsters = monsters.filter(monster => 
+		const filterMonsters = monsters.filter(monster => 
 			monster.name.toLowerCase().includes(searchField.toLowerCase())
 			);
 		return (
@@ -38,7 +38,7 @@ class Card extends React.Component {
 				placeholder='search monsters'
 				handleChange={this.handleChange}
 			/>
-			<CardList monsters={filteredMonsters} />	
+			<CardList monsters={filterMonsters} />	
 			</div>
 			);
 	}
